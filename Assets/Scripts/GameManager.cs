@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     public Dictionary<string, Sheet> sheets = new Dictionary<string, Sheet>();
 
-    float speed = 1.0f;
+    float speed = 2.0f;
     public float Speed
     {
         get
@@ -176,11 +176,8 @@ public class GameManager : MonoBehaviour
     {
         // 화면 페이드 인
         canvases[(int)Canvas.SFX].SetActive(true);
-        yield return StartCoroutine(AniPreset.Instance.IEAniFade(sfxFade, false, 1f));
+        yield return StartCoroutine(AniPreset.Instance.IEAniFade(sfxFade, false, 8f));
 
-        // 타이틀 인트로 재생
-        canvases[(int)Canvas.Title].GetComponent<Animation>().Play();
-        yield return new WaitForSeconds(5.6f);
 
         // 선택화면 시작
         Select();
