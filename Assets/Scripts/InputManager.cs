@@ -79,6 +79,58 @@ public class InputManager : MonoBehaviour
             keyEffects[3].gameObject.SetActive(false);
         }
     }
+    public void OnNoteLine4(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            judgement.Judge(4);
+            keyEffects[5].gameObject.SetActive(true);
+        }
+        else if (context.canceled)
+        {
+            judgement.CheckLongNote(4);
+            keyEffects[4].gameObject.SetActive(false);
+        }
+    }
+    public void OnNoteLine5(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            judgement.Judge(5);
+            keyEffects[5].gameObject.SetActive(true);
+        }
+        else if (context.canceled)
+        {
+            judgement.CheckLongNote(5);
+            keyEffects[5].gameObject.SetActive(false);
+        }
+    }
+    public void OnNoteLine6(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            judgement.Judge(6);
+            keyEffects[6].gameObject.SetActive(true);
+        }
+        else if (context.canceled)
+        {
+            judgement.CheckLongNote(6);
+            keyEffects[6].gameObject.SetActive(false);
+        }
+    }
+    public void OnNoteLine7(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            judgement.Judge(7);
+            keyEffects[7].gameObject.SetActive(true);
+        }
+        else if (context.canceled)
+        {
+            judgement.CheckLongNote(7);
+            keyEffects[7].gameObject.SetActive(false);
+        }
+    }
     public void OnSpeedDown(InputAction.CallbackContext context)
     {
         if (context.started)
