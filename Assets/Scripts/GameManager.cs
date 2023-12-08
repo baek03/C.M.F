@@ -176,11 +176,7 @@ public class GameManager : MonoBehaviour
     {
         // 화면 페이드 인
         canvases[(int)Canvas.SFX].SetActive(true);
-        yield return StartCoroutine(AniPreset.Instance.IEAniFade(sfxFade, false, 1f));
-
-        // 타이틀 인트로 재생
-        canvases[(int)Canvas.Title].GetComponent<Animation>().Play();
-        yield return new WaitForSeconds(5.6f);
+        yield return StartCoroutine(AniPreset.Instance.IEAniFade(sfxFade, false, 50f));
 
         // 선택화면 시작
         Select();
