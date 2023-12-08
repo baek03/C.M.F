@@ -9,7 +9,7 @@ public class BGA : MonoBehaviour
     public float speed2 = 1.2f;
     
     Image image;
-
+    //æ»≥Á«œººø‰
     void Start()
     {
         image = GetComponent<Image>();
